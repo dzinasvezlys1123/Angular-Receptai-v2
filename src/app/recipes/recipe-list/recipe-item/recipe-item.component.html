@@ -1,0 +1,13 @@
+<a role="button" class=" mb-3 list-group" [routerLink]="[index]">
+    <div class="list-group-item" routerLinkActive="active">
+        <div class="row">
+            <div class="col-7">
+                <h4>{{recipe.name}}</h4>
+                <p class="d-block text-truncate" style="max-width: 550px;">{{recipe.discription}}</p>
+            </div>
+            <div class="col-5 m-auto">
+                    <img [src]="recipe.imgPath" [alt]="recipe.name" height="100px" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</a>

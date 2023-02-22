@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand  navbar-light bg-light" >
+<div class="container">
+  <div class="navbar-header d-none d-sm-block">
+    <a (click)="redirect()"class="navbar-brand" colorDirective role="button" >Recipe Book</a>
+  </div>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav">
+      <li class="nav-item" *ngIf="isAuthantecated" >
+        <a class="nav-link" routerLinkActive="active" routerLink="/recipes" >Recipe</a>
+      </li>
+      <li class="nav-item" *ngIf="isAuthantecated">
+        <a class="nav-link" routerLinkActive="active" routerLink="/shopping-list">Shopping List</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ms-auto">
+      <li class="dropdown nav-item" *ngIf="isAuthantecated" >
+        <a class="dropdown-toggle nav-link" role="button"
+        id="dropdownMenuButton"
+        aria-expanded="false"
+        (click)="changeIsOpen()"
+        >Manage</a>
+        <ul [ngClass]=" dropdowenIsOpen ? 'show': '' "  class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+          <li><a  class="dropdown-item" role="button" (click)="onSaveData()">Saving Data</a></li>
+          <li><a class="dropdown-item" role="button" (click)="onFetchData()" >Fetch Data</a></li>
+        </ul>
+      </li>
+        <li class="nav-item"><a class="nav-link" role="button" *ngIf="isAuthantecated" (click)="onLogout()">Logout</a></li>
+        <li class="nav-item"><a class="nav-link" role="button" routerLink="/auth" routerLinkActive="router-link-active" *ngIf="!isAuthantecated" >Autantication</a></li>
+    </ul>
+  </div>
+</div>
+</nav>

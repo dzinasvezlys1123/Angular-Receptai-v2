@@ -1,0 +1,6 @@
+.scrol-container{
+    height:79vh;
+    width:100%;
+    overflow:hidden;
+    overflow-y:scroll;
+}

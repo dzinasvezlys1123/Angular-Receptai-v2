@@ -1,0 +1,20 @@
+.back-drop{
+    position: fixed;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    z-index: 50;
+    top: 0;
+    left: 0;
+}
+
+.alert-box{
+    position: fixed;
+    top: 30vh; /*من فوق خد 30% من الارتفاع*/
+    left: 25vw; /* ابعدها عن الشمال مقداء 25 من العرض*/
+    width: 50vw; /* خلي عرضها نفسه 50 فى الميه من الشاشه فحيتبقي خمسه وعشرين من على اليمين فحتبقى في النص*/
+    background-color: white;
+    z-index: 100;
+    padding: 2rem;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.26);
+}
